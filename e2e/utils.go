@@ -614,7 +614,7 @@ func showBlacklisted(ctx context.Context, val *cosmos.ChainNode, blacklistedWall
 	return showBlacklistedRes, nil
 }
 
-// showPaused queries paused state the token factory by running: `query fiat-tokenfactory show-paused`.
+// showPaused queries the paused state the token factory by running: `query fiat-tokenfactory show-paused`.
 func showPaused(ctx context.Context, val *cosmos.ChainNode) (fiattokenfactorytypes.QueryGetPausedResponse, error) {
 	res, _, err := val.ExecQuery(ctx, "fiat-tokenfactory", "show-blacklister")
 	if err != nil {
